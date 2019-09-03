@@ -7,7 +7,8 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka-center
+    ip-address: 192.168.22.36
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -16,5 +17,5 @@ eureka:
     eviction-interval-timer-in-ms: 1000 # 续期时间，即扫描失效服务的间隔时间(毫秒)
 spring:
   application:
-    name: eureka-server
+    name: eureka-center
 

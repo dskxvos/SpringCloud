@@ -12,6 +12,7 @@ public class HelloController {
     @Autowired
     private HelloRmote helloRmote;
 
+    //如果类上存在RequestMapping 需在此处把值也添加上去
     @RequestMapping("/hi")
     public String hi(@RequestParam("name") String name){
         return helloRmote.hi(name);

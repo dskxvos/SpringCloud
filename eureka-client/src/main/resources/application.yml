@@ -1,5 +1,5 @@
 server:
-  port: 8762
+  port: 9998
 spring:
   application:
     name: eureka-client-hi
@@ -9,4 +9,4 @@ eureka:
       lease-renewal-interval-in-seconds: 12  #心跳间隔时间(S)
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.22.36:8761/eureka/
