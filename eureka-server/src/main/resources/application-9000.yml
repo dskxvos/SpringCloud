@@ -1,5 +1,5 @@
 server:
-  port: 8761
+  port: 9000
 
   # hostname 设置当前实例的主机名称
   #通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
@@ -7,14 +7,14 @@ server:
 
 eureka:
   instance:
-    hostname: www.springcloudTest2.com
+    hostname: www.springcloudTL.com
     prefer-ip-address: false
   client:
     register-with-eureka: true
-    #多节点时 为true
+    #多节点时 true
     fetch-registry: true
     service-url:
-      defaultZone: http://www.springcloudTL.com:9000/eureka/,http://www.springcloudTest.com:9001/eureka/
+      defaultZone: http://www.springcloudTest2.com:8761/eureka/,http://www.springcloudTest.com:9001/eureka/
   server:
     enable-self-preservation: false #enable-self-preservation: false 关闭自我保护模式
     eviction-interval-timer-in-ms: 1000 # 续期时间，即扫描失效服务的间隔时间(毫秒)
@@ -24,3 +24,4 @@ spring:
   cloud:
     inetutils:
       timeout-seconds: 10
+
